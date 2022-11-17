@@ -10,84 +10,288 @@
 </head>
 
 <body>
-    <div class="bg">
-        <header class="header">
-            <div class="container">
-                <div class="row">
-                    <div class="logo">
-                        <img src="/images/logo.png" alt="logo">
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="logo">
+                    <img src="/images/logo.png" alt="logo">
+                </div>
+                <div class="contacts">
+                    <div class="phone">
+                        <img src="/images/Vector4.png" alt="phone">
+                        <span class="number">+375 (29) 999-99-99</span>
                     </div>
-                    <div class="contacts">
-                        <div class="phone">
-                            <img src="/images/Vector4.png" alt="phone">
-                            <span class="number">+375 (29) 999-99-99</span>
+                    <div class="icons">
+                        <div class="icon1">
+                            <svg width="31" height="30" viewBox="0 0 31 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M29.2183 5.61503C29.6635 6.76169 29.8998 7.97479 29.9166 9.20007C30.0095 10.7412 30.01 11.2452 30.0133 15.146L30.0133 15.2005C30.0133 19.1528 29.9916 19.6462 29.92 21.2025C29.895 22.4142 29.66 23.6082 29.2216 24.7406C28.8351 25.7076 28.2453 26.5857 27.4897 27.3191C26.7342 28.0526 25.8295 28.6251 24.8333 29.0003C23.6672 29.4251 22.4352 29.6544 21.19 29.6782C19.5983 29.7687 19.0767 29.7687 15.0067 29.7687C10.9367 29.7687 10.4283 29.7477 8.82333 29.6782C7.57561 29.6383 6.34405 29.3921 5.18166 28.9501C4.1851 28.5758 3.27996 28.0037 2.52406 27.2705C1.76816 26.5373 1.17813 25.6592 0.791666 24.6921C0.353333 23.558 0.118333 22.3641 0.0933332 21.154C0 19.6074 0 19.1026 0 15.1519C0 11.2013 0.0216666 10.7079 0.0933332 9.14992C0.116872 7.9416 0.353051 6.74608 0.791666 5.61503C1.17748 4.64768 1.76707 3.76916 2.52272 3.03567C3.27837 2.30218 4.18343 1.72987 5.18 1.35537C6.34557 0.930645 7.57692 0.700894 8.82166 0.675893C10.4133 0.586914 10.935 0.586914 15.005 0.586914C19.075 0.586914 19.5833 0.606328 21.1866 0.675893C22.4319 0.700712 23.6639 0.930465 24.83 1.35537C25.8264 1.73013 26.7313 2.30253 27.4869 3.03599C28.2425 3.76944 28.8322 4.64783 29.2183 5.61503ZM7.28999 15.1439C7.28999 19.2757 10.7383 22.6229 14.995 22.6229C17.0385 22.6229 18.9983 21.835 20.4432 20.4324C21.8882 19.0298 22.7 17.1274 22.7 15.1439C22.7 13.1603 21.8882 11.258 20.4432 9.85535C18.9983 8.45275 17.0385 7.66478 14.995 7.66478C10.7383 7.66478 7.28999 11.012 7.28999 15.1439ZM21.21 7.38814C21.21 8.35234 22.0116 9.13212 23.0066 9.13212C23.9983 9.13212 24.8016 8.35234 24.8016 7.38814C24.8016 7.15922 24.7552 6.93254 24.6649 6.72105C24.5747 6.50956 24.4424 6.31739 24.2757 6.15552C24.1089 5.99365 23.9109 5.86525 23.693 5.77765C23.4752 5.69005 23.2416 5.64496 23.0058 5.64496C22.77 5.64496 22.5365 5.69005 22.3186 5.77765C22.1007 5.86525 21.9027 5.99365 21.736 6.15552C21.5692 6.31739 21.4369 6.50956 21.3467 6.72105C21.2564 6.93254 21.21 7.15922 21.21 7.38814ZM20 15.1441C20 17.8273 17.7592 20.0024 14.995 20.0024C12.2308 20.0024 9.98999 17.8273 9.98999 15.1441C9.98999 12.461 12.2308 10.2859 14.995 10.2859C17.7592 10.2859 20 12.461 20 15.1441Z"
+                                    fill="#10133A" />
+                            </svg>
                         </div>
-                        <div class="vectors">
-                            <img src="/images/Vector1.png" alt="inst">
-                            <img src="/images/Vector2.png" alt="vk">
-                            <img src="/images/Vector3.png" alt="facebook">
+                        <div class="icon2">
+                            <svg width="34" height="33" viewBox="0 0 34 33" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M22.1267 0H11.9001C2.56005 0 0.338379 2.15652 0.338379 11.2065V21.1333C0.338379 30.1978 2.54338 32.356 11.8834 32.356H22.1101C31.4484 32.356 33.6718 30.2156 33.6718 21.1495V11.2227C33.6718 2.15652 31.4667 0 22.1267 0ZM27.2484 23.086H24.8167C23.8967 23.086 23.6201 22.3628 21.9701 20.7612C20.5301 19.4136 19.9217 19.2453 19.5567 19.2453C19.0534 19.2453 18.9151 19.3796 18.9151 20.0542V22.1768C18.9151 22.7511 18.7234 23.0876 17.1784 23.0876C15.679 22.9898 14.2249 22.5476 12.9361 21.7974C11.6472 21.0473 10.5603 20.0107 9.76506 18.7729C7.877 16.4918 6.56329 13.8146 5.92839 10.9541C5.92839 10.5998 6.06672 10.2795 6.76172 10.2795H9.19172C9.81672 10.2795 10.0417 10.5497 10.2867 11.1725C11.4667 14.544 13.4801 17.4755 14.2967 17.4755C14.6101 17.4755 14.7467 17.3412 14.7467 16.5824V13.1106C14.6434 11.5268 13.7767 11.3925 13.7767 10.8198C13.7879 10.6688 13.8592 10.5279 13.9755 10.427C14.0919 10.3261 14.2442 10.2732 14.4001 10.2795H18.2201C18.7417 10.2795 18.9151 10.5319 18.9151 11.1385V15.8237C18.9151 16.3301 19.1401 16.4983 19.2967 16.4983C19.6101 16.4983 19.8517 16.3301 20.4251 15.7735C21.6565 14.3158 22.6626 12.6917 23.4117 10.9525C23.4883 10.7436 23.6332 10.5647 23.8243 10.4432C24.0154 10.3217 24.2422 10.2642 24.4701 10.2795H26.9017C27.6301 10.2795 27.7851 10.6338 27.6301 11.1385C26.7459 13.0612 25.6519 14.8862 24.3667 16.5824C24.1051 16.9707 24.0001 17.1729 24.3667 17.6275C24.6084 17.9818 25.4601 18.6726 26.0334 19.3294C26.8666 20.1362 27.5585 21.0695 28.0817 22.0926C28.2901 22.7495 27.9417 23.0876 27.2484 23.0876V23.086Z"
+                                    fill="#10133A" />
+                            </svg>
+                        </div>
+                        <div class="icon3">
+                            <svg width="33" height="32" viewBox="0 0 33 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1.78501 0.646729H30.245C31.225 0.646729 32.005 1.40386 32.005 2.35512V30C32.005 30.9319 31.225 31.7084 30.245 31.7084H22.085V19.672H26.245L26.865 14.9934H22.085V12.0037C22.085 10.6447 22.485 9.71286 24.485 9.71286H27.045V5.51953C26.605 5.46129 25.085 5.34481 23.325 5.34481C19.625 5.34481 17.105 7.51913 17.105 11.5377V14.9934H12.925V19.672H17.105V31.7084H1.78501C1.31636 31.7085 0.866619 31.5291 0.533373 31.2093C0.200128 30.8894 0.0102705 30.4549 0.00500488 30V2.35512C0.00500488 1.40386 0.805005 0.646729 1.78501 0.646729Z"
+                                    fill="#10133A" />
+                            </svg>
                         </div>
                     </div>
                 </div>
-                <nav class="navigation">
-                    <a class="menu" href="">О тренерах</a>
-                    <a class="menu" href="">Тренировки</a>
-                    <a class="menu" href="">Отзывы</a>
-                    <a class="menu" href="">Контакты</a>
-                </nav>
             </div>
-        </header>
+        </div>
+        <nav class="navigation">
+            <a class="menu" href="">О тренерах</a>
+            <a class="menu" href="">Тренировки</a>
+            <a class="menu" href="">Отзывы</a>
+            <a class="menu" href="">Контакты</a>
+        </nav>
+    </header>
 
-        <main>
-            <section class="part1">
-                <div class="container">
-                    <div class="text">
-                        <h1>Персональные тренировки</h1>
-                        <p class="text1">Приведи свое тело <br> в порядок с Fitness Storie</p>
+    <main>
+        <section class="part1">
+            <div class="container">
+                <div class="text">
+                    <h1>Персональные тренировки</h1>
+                    <p class="text1">Приведи свое тело <br> в порядок с Fitness Storie</p>
+                </div>
+                <img class="img1" src="/images/main.png" alt="main">
+            </div>
+        </section>
+
+        <section class="part2">
+            <div class="container">
+
+                <div class="tabs-block-wrapper">
+                    <div id="tabs">
+                        <div class="tab-btn active" data-btn="1">Учет особенностей здоровья</div>
+                        <div class="tab-btn" data-btn="2">Эффективность упражнений</div>
+                        <div class="tab-btn" data-btn="3">Индивидуальный график</div>
+                        <div class="tab-btn" data-btn="4">Персональное питание</div>
                     </div>
-                    <img class="img1" src="/images/main.png" alt="main">
-                </div>
-            </section>
-
-            <section class="part2">
-                <div class="container">
-                    <div class="lists">
-                    <ul>
-                        <li>Учет особенностей здоровья</li>
-                        <li>Эффективность упражнений</li>
-                        <li>Индивидуальный график</li>
-                        <li>Персональное питание</li>
-                    </ul>
+                    <div id="contents">
+                        <div class="content active" data-content="1"> <img class="background"
+                                src="/images/background.png" alt="background">
+                            <img class="tracery1" src="/images/first.png" alt="first">
+                            <p class="texthealth">Учитываются все особенности Вашего здоровья.
+                                Для нас важно, чтобы занятия не были во вред
+                                Вашему здоровья.</p>
+                        </div>
+                        <div class="content" data-content="2"><img class="background" src="/images/background.png"
+                                alt="background">
+                            <img class="tracery2" src="/images/second.png" alt="second">
+                            <p class="textwork">Результат работы не заставит себя ждать! <br>
+                                Уже через неделю вы увидите изменения в зеркале.</p>
+                        </div>
+                        <div class="content" data-content="3"><img class="background" src="/images/background.png"
+                                alt="background">
+                            <img class="tracery3" src="/images/third.png" alt="third">
+                            <p class="textdays">Дни и время занятий подбираются
+                                индивидуально под Вас.</p>
+                        </div>
+                        <div class="content" data-content="4"><img class="background" src="/images/background.png"
+                                alt="background">
+                            <img class="tracery4" src="/images/fourth.png" alt="fourth">
+                            <p class="textfitness">Для более эффективного и быстрого результатамы
+                                составим для Вас фитнес-меню с учетом Ваших
+                                предпочтений.</p>
+                        </div>
                     </div>
                 </div>
-            </section>
+        </section>
 
-            <section class="part3" >
-                <div class="container">
-                    <h2>Наши тренера</h2>
-                    <p>Все тренера являются сертифицированными
-                        специалистами. Индивидуально подходят
-                        к каждому, учитая все особенности.
-                        Все наши тренера являются действующими
-                        спортсменами.</p>
-                    <img src="" alt="">
-                    <h2>Тренировки</h2>
-                    <img src="" alt="">
-                    <p>План тренировки составляется исходя
-                        из Ваших целей. План питания также составляется
-                        из Ваших пожеланий и целей. А также расписание
-                        занятий составляется по Вашему желанию. Тренировки
-                        проводятся в профессионально оборудованном зале.</p>
+        <section class="part3">
+            <div class="container">
+                <h2 class="htext2">Наши тренера</h2>
+                <p class="text2">Все тренера являются сертифицированными
+                    специалистами. Индивидуально подходят
+                    к каждому, учитая все особенности.
+                    Все наши тренера являются действующими
+                    спортсменами.</p>
+                <img class="img2" src="/images/part3img1.png" alt="girls">
+                <h2 class="htext3">Тренировки</h2>
+                <img class="img3" src="/images/part3img2.png" alt="girl">
+                <p class="text3">План тренировки составляется исходя
+                    из Ваших целей. План питания также составляется
+                    из Ваших пожеланий и целей. А также расписание
+                    занятий составляется по Вашему желанию. Тренировки
+                    проводятся в профессионально оборудованном зале.</p>
+            </div>
+        </section>
+
+        <section class="part4">
+            <div class="container">
+                <div class="h2part4">
+                    <h2>Отзывы</h2>
                 </div>
-            </section>
+                <div class="flex-wrapper">
+                    <div class="slider-wrapper">
+                        <div class="slide active">
+                            <div class="person1"></div>
+                            <div class="wave"></div>
+                            <p class="feedback">Хочу поделиться своим результатом. -6 кг за месяц. Заниматься было
+                                только в удовольствие. Спасибо Виктории за ее опыт, мотивацию, професиионализм.
+                                Продолжаю заниматься для поддержки формы.</p>
+                        </div>
+                        <div class="slide">
+                            <div class="person2"></div>
+                            <div class="wave"></div>
+                            <p class="feedback">Все супер! Все понравилось!</p>
+                        </div>
+                        <div class="slide">
+                            <div class="person3"></div>
+                            <div class="wave"></div>
+                            <p class="feedback">Спасибо за этот профессионализм трениров. Всем рекомендую!</p>
+                        </div>
+                    </div>
+                    <div id="btn-prev"><img src="/images/prev.png" alt="prev"></div>
+                    <div id="btn-next"><img src="/images/next.png" alt="next"></div>
+                </div>
+            </div>
+        </section>
 
-        </main>
+        <section class="part5">
+            <div class="container">
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/efJER_016S4" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="h2part5">
+                    <h2>Записаться на пробное БЕСПЛАТНОЕ занятие</h2>
+                </div>
+                <form action="#" method="get" class="registration">
+                    <div class="input-group">
+                        <label for="name">Имя*</label>
+                        <input type="text" name="name" id="name" value="" required />
+                    </div>
 
-        <footer>
+                    <div class="input-group">
+                        <label for="surname">Фамилия*</label>
+                        <input type="text" name="surname" id="surname" value="" required />
+                    </div>
 
-        </footer>
+                    <div class="input-group">
+                        <label for="phone">Телефон*</label>
+                        <input type="tel" name="phone" id="phone" value="+375" required />
+                    </div>
 
-    </div>
+                    <div class="select is-active">
+                        <div class="select__header">
+                            <span class="select__current">Похудеть</span>
+                            <div class="select__icon"></div>
+                        </div>
+
+                        <div class="select__body">
+                            <div class="select__item">Похудеть</div>
+                            <div class="select__item">Набрать массу</div>
+                            <div class="select__item">Скорректировать пропорции</div>
+                            <div class="select__item">Поддержка формы</div>
+                            <div class="select__item">Специализированные тренировки</div>
+                        </div>
+                    </div>
+
+                    <script src="main.js"></script>
+
+                    <!-- <div class="input-group">
+                        <label for="phone">Цель</label>
+                        <select size="1" name="goal" id="">
+                            <option value="Похудеть">Похудеть</option>
+                            <option value="Набрать массу">Набрать массу</option>
+                            <option value="Скорректировать пропорции">Скорректировать пропорции</option>
+                            <option value="Поддержка формы">Поддержка формы</option>
+                            <option value="Специализированные тренировки">Специализированные тренировки</option>
+                        </select>
+                    </div> -->
+
+                    <div>
+                        <label for="">Адрес*</label>
+                        <p><input type="radio" name="address" value="komsomolskaya">ул. Комсомольская 7</p>
+                        <p><input type="radio" name="address" value="yablochniy">пер. Яблочный 1</p>
+                    </div>
+
+                    <div>
+                        <button class="button color" type="submit">Записаться</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="part6">
+            <div class="map" style="position:relative;overflow:hidden;"><a
+                    href="https://yandex.by/maps/157/minsk/?utm_medium=mapframe&utm_source=maps"
+                    style="color:#eee;font-size:12px;position:absolute;top:0px;">Минск</a><a
+                    href="https://yandex.by/maps/157/minsk/house/Zk4YcgVlS0MOQFtpfXR5eH5hYg==/?ll=27.425269%2C53.889226&utm_medium=mapframe&utm_source=maps&z=16.63"
+                    style="color:#eee;font-size:12px;position:absolute;top:14px;">Сухаревская улица, 56 —
+                    Яндекс Карты</a><iframe src="https://yandex.by/map-widget/v1/-/CCUbVHv19B" width="100%"
+                    height="100%" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+
+            <div class="calling">
+                <div class="wrapper">
+                    <div class="h2part6">
+                        <h2>Контакты</h2>
+                    </div>
+                    <div class="phone2">
+                        <img src="/images/Vector4.png" alt="phone">
+                        <span class="number2">+375 (44) 444-44-44</span>
+                    </div>
+                    <div class="address2">
+                        <div class="metka"></div>
+                        <!-- <img src="/images/metka.png" alt="metka"> -->
+                        <span class="coordinates">г. Минск,<br> ул. Сухаревская 56</span>
+                    </div>
+
+                    <div id="openModal" class="modal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title">Заказать звонок</h3>
+                                    <a href="#close" title="Close" class="close">×</a>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Бесплатная консультация. <br>
+                                        Оставьте свой номер телефона, и мы перезвоним Вам. </p>
+                                    <form action="#" method="get" class="registration"></form>
+                                    <div class="input-group">
+                                        <label for="phone">Телефон*</label>
+                                        <input type="tel" name="phone" id="phone" value="+375" required />
+                                    </div>
+                                    <div>
+                                        <button class="button color" type="submit">Заказать звонок</button>
+                                    </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="button color" href="#openModal">Заказать звонок</a>
+
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <nav class="navigation2">
+            <a class="menu" href="">О тренерах</a>
+            <a class="menu" href="">Тренировки</a>
+            <img src="/images/logo2.png" alt="logo">
+            <a class="menu" href="">Отзывы</a>
+            <a class="menu" href="">Контакты</a>
+        </nav>
+    </footer>
+    <script src="main.js"></script>
 </body>
 
 </html>
