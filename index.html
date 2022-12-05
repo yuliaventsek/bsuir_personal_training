@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness</title>
     <link rel="stylesheet" href="/css/styles.css">
+
 </head>
 
 <body>
+    <div class="btn-up btn-up_hide"></div>
     <header class="header">
         <div class="container">
             <div class="row">
@@ -51,10 +53,10 @@
             </div>
         </div>
         <nav class="navigation">
-            <a class="menu" href="">О тренерах</a>
-            <a class="menu" href="">Тренировки</a>
-            <a class="menu" href="">Отзывы</a>
-            <a class="menu" href="">Контакты</a>
+            <a class="menu" href="#treners">О тренерах</a>
+            <a class="menu" href="#trenirovki">Тренировки</a>
+            <a class="menu" href="#otziv">Отзывы</a>
+            <a class="menu" href="#contacts">Контакты</a>
         </nav>
     </header>
 
@@ -108,18 +110,19 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
 
         <section class="part3">
             <div class="container">
-                <h2 class="htext2">Наши тренера</h2>
+                <h2 id="treners" class="htext2">Наши тренера</h2>
                 <p class="text2">Все тренера являются сертифицированными
                     специалистами. Индивидуально подходят
                     к каждому, учитая все особенности.
                     Все наши тренера являются действующими
                     спортсменами.</p>
                 <img class="img2" src="/images/part3img1.png" alt="girls">
-                <h2 class="htext3">Тренировки</h2>
+                <h2 id="trenirovki" class="htext3">Тренировки</h2>
                 <img class="img3" src="/images/part3img2.png" alt="girl">
                 <p class="text3">План тренировки составляется исходя
                     из Ваших целей. План питания также составляется
@@ -132,24 +135,24 @@
         <section class="part4">
             <div class="container">
                 <div class="h2part4">
-                    <h2>Отзывы</h2>
+                    <h2 id="otziv">Отзывы</h2>
                 </div>
                 <div class="flex-wrapper">
                     <div class="slider-wrapper">
                         <div class="slide active">
-                            <div class="person1"></div>
+                            <div id="pers" class="person1"></div>
                             <div class="wave"></div>
                             <p class="feedback">Хочу поделиться своим результатом. -6 кг за месяц. Заниматься было
                                 только в удовольствие. Спасибо Виктории за ее опыт, мотивацию, професиионализм.
                                 Продолжаю заниматься для поддержки формы.</p>
                         </div>
                         <div class="slide">
-                            <div class="person2"></div>
+                            <div id="pers" class="person2"></div>
                             <div class="wave"></div>
                             <p class="feedback">Все супер! Все понравилось!</p>
                         </div>
                         <div class="slide">
-                            <div class="person3"></div>
+                            <div id="pers" class="person3"></div>
                             <div class="wave"></div>
                             <p class="feedback">Спасибо за этот профессионализм трениров. Всем рекомендую!</p>
                         </div>
@@ -163,7 +166,7 @@
         <section class="part5">
             <div class="container">
                 <div class="video">
-                    <iframe src="https://www.youtube.com/embed/efJER_016S4" title="YouTube video player" frameborder="0"
+                    <iframe src="https://www.youtube.com/embed/efJER_016S4" title="YouTube video player"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                 </div>
@@ -186,7 +189,7 @@
                         <input type="tel" name="phone" id="phone" value="+375" required />
                     </div>
 
-                    <div class="select is-active">
+                    <!-- <div class="select is-active">
                         <div class="select__header">
                             <span class="select__current">Похудеть</span>
                             <div class="select__icon"></div>
@@ -201,9 +204,9 @@
                         </div>
                     </div>
 
-                    <script src="main.js"></script>
+                    <script src="main.js"></script> -->
 
-                    <!-- <div class="input-group">
+                    <div class="input-group">
                         <label for="phone">Цель</label>
                         <select size="1" name="goal" id="">
                             <option value="Похудеть">Похудеть</option>
@@ -212,15 +215,18 @@
                             <option value="Поддержка формы">Поддержка формы</option>
                             <option value="Специализированные тренировки">Специализированные тренировки</option>
                         </select>
-                    </div> -->
-
-                    <div>
-                        <label for="">Адрес*</label>
-                        <p><input type="radio" name="address" value="komsomolskaya">ул. Комсомольская 7</p>
-                        <p><input type="radio" name="address" value="yablochniy">пер. Яблочный 1</p>
                     </div>
-
-                    <div>
+                    <div class="adress">
+                        <label for="address">Адрес*</label>
+                        <div class="radio">
+                            <input class="custom-radio" type="radio" id="komsomolskaya" name="adress"
+                                value="komsomolskaya" checked>
+                            <label for="komsomolskaya">ул. Комсомольская 7</label>
+                            <input class="custom-radio" type="radio" id="yablochniy" name="adress" value="yablochniy">
+                            <label for="yablochniy">пер. Яблочный 1</label>
+                        </div>
+                    </div>
+                    <div class="btn">
                         <button class="button color" type="submit">Записаться</button>
                     </div>
                 </form>
@@ -233,12 +239,12 @@
                     href="https://yandex.by/maps/157/minsk/house/Zk4YcgVlS0MOQFtpfXR5eH5hYg==/?ll=27.425269%2C53.889226&utm_medium=mapframe&utm_source=maps&z=16.63"
                     style="color:#eee;font-size:12px;position:absolute;top:14px;">Сухаревская улица, 56 —
                     Яндекс Карты</a><iframe src="https://yandex.by/map-widget/v1/-/CCUbVHv19B" width="100%"
-                    height="100%" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+                    height="100%" allowfullscreen="true" style="position:relative;"></iframe></div>
 
             <div class="calling">
                 <div class="wrapper">
                     <div class="h2part6">
-                        <h2>Контакты</h2>
+                        <h2 id="contacts">Контакты</h2>
                     </div>
                     <div class="phone2">
                         <img src="/images/Vector4.png" alt="phone">
@@ -246,7 +252,6 @@
                     </div>
                     <div class="address2">
                         <div class="metka"></div>
-                        <!-- <img src="/images/metka.png" alt="metka"> -->
                         <span class="coordinates">г. Минск,<br> ул. Сухаревская 56</span>
                     </div>
 
@@ -254,28 +259,28 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h3 class="modal-title">Заказать звонок</h3>
-                                    <a href="#close" title="Close" class="close">×</a>
+                
+                                    <a href="#close" title="Close" class="close">x</a>
                                 </div>
                                 <div class="modal-body">
-                                    <p>Бесплатная консультация. <br>
+                                    <h3 class="modal-title">Заказать звонок</h3>
+                                    <p>БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ. <br>
                                         Оставьте свой номер телефона, и мы перезвоним Вам. </p>
-                                    <form action="#" method="get" class="registration"></form>
-                                    <div class="input-group">
-                                        <label for="phone">Телефон*</label>
-                                        <input type="tel" name="phone" id="phone" value="+375" required />
-                                    </div>
-                                    <div>
-                                        <button class="button color" type="submit">Заказать звонок</button>
-                                    </div>
+                                    <form action="#" method="get" class="wintel">
+                                        <div class="input-group">
+                                            <label for="phone">Телефон*</label>
+                                            <input type="tel" name="phone" id="phone" value="+375" required />
+                                        </div>
+                                        <div>
+                                            <button class="button color" type="submit">Заказать звонок</button>
+                                        </div>
                                     </form>
 
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <a class="button color" href="#openModal">Заказать звонок</a>
-
+                        <a href="#openModal"><button class="button color">Заказать звонок</button></a> 
                 </div>
             </div>
 
@@ -284,11 +289,11 @@
 
     <footer>
         <nav class="navigation2">
-            <a class="menu" href="">О тренерах</a>
-            <a class="menu" href="">Тренировки</a>
+            <a class="menu" href="#treners">О тренерах</a>
+            <a class="menu" href="#trenirovki">Тренировки</a>
             <img src="/images/logo2.png" alt="logo">
-            <a class="menu" href="">Отзывы</a>
-            <a class="menu" href="">Контакты</a>
+            <a class="menu" href="#otziv">Отзывы</a>
+            <a class="menu" href="#contacts">Контакты</a>
         </nav>
     </footer>
     <script src="main.js"></script>

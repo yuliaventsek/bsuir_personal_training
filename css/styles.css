@@ -2,21 +2,21 @@
     font-family: 'OpenSans';
     font-weight: 700;
     font-style: normal;
-    src: local('OpenSans') url('./fonts/OpenSans-Bold.ttf');
+    src: local('OpenSans') url(/fonts/OpenSans-Bold.woff2);
 }
 
 @font-face {
     font-family: 'OpenSans';
     font-weight: 600;
     font-style: normal;
-    src: local('OpenSans') url('./fonts/OpenSans-SemiBold.ttf');
+    src: local('OpenSans') url(/fonts/OpenSans-SemiBold.woff2);
 }
 
 @font-face {
     font-family: 'OpenSans';
     font-weight: 400;
     font-style: normal;
-    src: local('OpenSans') url('./fonts/OpenSans-Regular.ttf');
+    src: local('OpenSans') url(../fonts/OpenSans-Regular.woff2);
 }
 
 * {
@@ -33,6 +33,51 @@ body {
     max-width: 1440px;
     min-width: 375px;
 }
+.btn-up {
+    /* фиксированное позиционирование */
+    position: fixed;
+    /* цвет фона */
+    background-color: #EF4621;
+    /* расстояние от правого края окна браузера */
+    right: 20px;
+    /* расстояние от нижнего края окна браузера */
+    bottom: 0;
+    /* скругление верхнего левого угла */
+    border-top-left-radius: 8px;
+    /* скругление верхнего правого угла */
+    border-top-right-radius: 8px;
+    /* вид курсора */
+    cursor: pointer;
+    /* отображение элемента как flex */
+    display: flex;
+    /* выравниваем элементы внутри элемента по центру вдоль поперечной оси */
+    align-items: center;
+    /* выравниваем элементы внутри элемента по центру вдоль главной оси */
+    justify-content: center;
+    /* ширина элемента */
+    width: 60px;
+    /* высота элемента */
+    height: 50px;
+  }
+  
+  .btn-up::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E");
+  }
+  
+  .btn-up_hide {
+    display: none;
+  }
+  
+  @media (hover: hover) and (pointer: fine) {
+    .btn-up:hover {
+      background-color: #10133A; /* цвет заднего фона при наведении */
+    }
+  }
 
 .header {
     height: 296px;
@@ -163,22 +208,23 @@ h1 {
 }
 
 #tabs {
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
-    border-color: transparent linear-gradient(270deg, #F6CF45 0%, #EF4621 100%);
-    border-style: solid;
-    border-width: 5px;
+    border-right: 5px solid;
+    border-image: linear-gradient(to bottom, #F6CF45, #EF4621) 1 100%;
 }
 
 .tab-btn {
     box-sizing: border-box;
-    width: 439px;
+    width: 435px;
     height: 69px;
     font-weight: 600;
     font-size: 22px;
     display: flex;
     color: #363636;
-    margin-bottom: 58px;
+    margin-top: 25px;
+    margin-bottom: 33px;
     align-items: center;
     cursor: pointer;
 }
@@ -187,9 +233,9 @@ h1 {
     background-color: #10133A;
     color: #ffffff;
     padding-left: 21px;
-    /* border-color: transparent transparent transparent linear-gradient(270deg, #F6CF45 0%, #EF4621 100%);
-    border-style: solid;
-    border-width: 5px; */
+    font-weight: 700;
+    border-left: 5px solid;
+    border-image: linear-gradient(to bottom, #F6CF45, #EF4621) 1 100%;
 }
 
 #contents {
@@ -480,6 +526,10 @@ h2 {
     padding-top: 90px;
 }
 
+iframe {
+    border: 0;
+}
+
 .video {
     width: 1236px;
     height: 728px;
@@ -505,12 +555,14 @@ h2 {
     margin-bottom: 77px;
 }
 
-.container .registration {
+.registration {
     width: 855px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
-.contsiner .registration .input-group {
+.input-group {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
@@ -518,7 +570,7 @@ h2 {
     line-height: 38px;
 }
 
-.container .registration .input-group {
+.input-group {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
@@ -532,7 +584,7 @@ h2 {
     margin-bottom: 80px;
 }
 
-.container .registration .input-group input {
+.input-group input {
     width: 650px;
     border: 1px solid transparent;
     background: #DBDCE1;
@@ -544,7 +596,7 @@ h2 {
     transition: .3s;
 }
 
-.container .registration .input-group input:focus {
+.input-group input:focus {
     border: 1px solid #000000;
 }
 
@@ -554,6 +606,11 @@ label {
     text-align: left;
     display: flex;
     align-items: center;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
 }
 
 .button {
@@ -574,12 +631,22 @@ label {
     background: linear-gradient(90deg, #EF4621 0%, #F6CF45 100%);
 }
 
+.button:hover,
+.button:hover {
+    box-shadow: 1px 5px 5px 0px rgba(34, 60, 80, 0.2);
+}
+
+.button:active,
+.button:active {
+    box-shadow: 5px 5px 5px 0px rgba(34, 60, 80, 0.2) inset;
+}
+
 /* form input[type="radio"] {
     display: none;
 } */
 
 
-.select {
+/* .select {
     margin: 0 auto;
     position: relative;
     width: 650px;
@@ -642,11 +709,78 @@ label {
 
 .select__item:hover {
     font-weight: 700;
+} */
+
+
+select {
+    margin: 0 auto;
+    margin-left: 130px;
+    width: 650px;
+    height: 85px;
+    border: 1px solid transparent;
+    background: #DBDCE1;
+    padding: 21px 50px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 41px;
+    border-radius: 50px;
+    background-image: url(/images/next.png) no-repeat;
 }
 
+/* для элемента input c type="radio" */
+.custom-radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
 
+/* для элемента label связанного с .custom-radio */
+.custom-radio+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
 
+/* создание в label псевдоэлемента  before со следующими стилями */
+.custom-radio+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 2px solid #000;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
 
+/* стили для активной радиокнопки (при нажатии на неё) */
+.custom-radio:not(:disabled):active+label::before {
+    background-color: #efefef;
+    border-color: #efefef;
+}
+
+/* стили для радиокнопки, находящейся в состоянии checked */
+.custom-radio:checked+label::before {
+    border-color: #000000;
+    background-color: #fff;
+    background-image: url(/images/circle.png);
+}
+
+.radio {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    margin-bottom: 60px;
+}
+
+.adress {
+    display: flex;
+    align-items: flex-start;
+}
 
 .part6 {
     height: 752px;
@@ -668,7 +802,7 @@ label {
 .calling .wrapper {
     padding-top: 40px;
     padding-left: 60px;
-    
+
 }
 
 
@@ -683,7 +817,7 @@ label {
     top: 109px
 }
 
-.phone2{
+.phone2 {
     margin-bottom: 85px;
 }
 
@@ -701,12 +835,12 @@ label {
     width: 100%;
 }
 
-.address2{
+.address2 {
     display: flex;
-    align-items: center;
 }
 
-.metka{
+.metka {
+    margin-top: 10px;
     width: 30px;
     height: 40px;
     background: url(/images/metka.png) no-repeat;
@@ -725,121 +859,132 @@ label {
 
 
 .modal {
-    position: fixed; /* фиксированное положение */
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0,0,0,0.5); /* фон */
-    z-index: 1050;
-    opacity: 0; /* по умолчанию модальное окно прозрачно */
-    -webkit-transition: opacity 200ms ease-in; 
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    /* по умолчанию модальное окно прозрачно */
+    -webkit-transition: opacity 200ms ease-in;
     -moz-transition: opacity 200ms ease-in;
-    transition: opacity 200ms ease-in; /* анимация перехода */
-    pointer-events: none; /* элемент невидим для событий мыши */
-    margin: 0;
-    padding: 0;
+    transition: opacity 200ms ease-in;
+    /* анимация перехода */
+    pointer-events: none;
+    /* элемент невидим для событий мыши */
 }
+
 /* При отображении модального окно */
 .modal:target {
-    opacity: 1; /* делаем окно видимым */
-	  pointer-events: auto; /* элемент видим для событий мыши */
-    overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+    opacity: 1;
+    /* делаем окно видимым */
+    pointer-events: auto;
+    /* элемент видим для событий мыши */
+    overflow-y: aubelto;
+    /* добавляем прокрутку по y, когда элемент не помещается на страницу */
 }
+
 /* ширина модального окна и его отступы от экрана */
 .modal-dialog {
-    position: relative;
-    width: auto;
-    margin: 10px;
+    height: 582px;
 }
+
 @media (min-width: 576px) {
-  .modal-dialog {
-      max-width: 500px;
-      margin: 30px auto; /* отображение окна по центру */
-  }
+    .modal-dialog {
+        max-width: 821px;
+        margin: 30px auto;
+        /* отображение окна по центру */
+    }
 }
-/* Стили для блока с контентом окна */ 
+
+/* Стили для блока с контентом окна */
 .modal-content {
     position: relative;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
-    background-color: #fff;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    border: 1px solid rgba(0,0,0,.2);
-    border-radius: .3rem;
+    background-color: #F4F5FF;
+    border-radius: 10px;
     outline: 0;
 }
-@media (min-width: 768px) {
-  .modal-content {
-      -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
-      box-shadow: 0 5px 15px rgba(0,0,0,.5);
-  }
-}
+
+/* @media (min-width: 768px) {
+    .modal-content {
+        -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    }
+} */
+
 /* Стили заголовка окна */
 .modal-header {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    padding: 15px;
-    border-bottom: 1px solid #eceeef;
+    justify-content: flex-end;
+    padding: 10px;
 }
+
 .modal-title {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 1.5;
-    font-size: 1.25rem;
-    font-weight: 500;
+    font-family: 'Open Sans';
+    font-style: normal;
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+    color: #10133A;
+    margin-bottom: 67px;
 }
+
 /* Стили кнопки "х" ("Закрыть")  */
 .close {
-    float: right;
-    font-family: sans-serif;
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 34px;
+    font-weight: 400;
     line-height: 1;
     color: #000;
-    text-shadow: 0 1px 0 #fff;
+    text-shadow: 0 1px 0 #000;
     opacity: .5;
     text-decoration: none;
 }
+
 /* Стили для закрывающей кнопки в фокусе или наведении */
-.close:focus, .close:hover {
+.close:focus,
+.close:hover {
     color: #000;
     text-decoration: none;
     cursor: pointer;
     opacity: .75;
 }
+
 /* Стили блока основного содержимого окна */
 .modal-body {
-  position: relative;
+    position: relative;
     -webkit-box-flex: 1;
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     padding: 15px;
-    overflow: auto;
+    /* overflow: auto; */
+    text-align: center;
 }
 
+.modal-body p {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    margin-bottom: 67px;
+}
 
+.wintel input {
+    width: 532px;
+    height: 85px;
+}
 
-.wrapper .button{
+.wintel .input-group {
+    width: 720px;
+    margin-left: 40px;
+}
+
+.wrapper .button {
     width: 285px;
 }
 
@@ -847,4 +992,9 @@ label {
 .navigation2 {
     height: 158px;
 
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
 }
