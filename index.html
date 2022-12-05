@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 
 </head>
 
@@ -140,19 +140,19 @@
                 <div class="flex-wrapper">
                     <div class="slider-wrapper">
                         <div class="slide active">
-                            <div id="pers" class="person1"></div>
+                            <div class="person1"></div>
                             <div class="wave"></div>
                             <p class="feedback">Хочу поделиться своим результатом. -6 кг за месяц. Заниматься было
                                 только в удовольствие. Спасибо Виктории за ее опыт, мотивацию, професиионализм.
                                 Продолжаю заниматься для поддержки формы.</p>
                         </div>
                         <div class="slide">
-                            <div id="pers" class="person2"></div>
+                            <div class="person2"></div>
                             <div class="wave"></div>
                             <p class="feedback">Все супер! Все понравилось!</p>
                         </div>
                         <div class="slide">
-                            <div id="pers" class="person3"></div>
+                            <div class="person3"></div>
                             <div class="wave"></div>
                             <p class="feedback">Спасибо за этот профессионализм трениров. Всем рекомендую!</p>
                         </div>
@@ -208,7 +208,7 @@
 
                     <div class="input-group">
                         <label for="phone">Цель</label>
-                        <select size="1" name="goal" id="">
+                        <select size="1" name="goal">
                             <option value="Похудеть">Похудеть</option>
                             <option value="Набрать массу">Набрать массу</option>
                             <option value="Скорректировать пропорции">Скорректировать пропорции</option>
@@ -217,7 +217,7 @@
                         </select>
                     </div>
                     <div class="adress">
-                        <label for="address">Адрес*</label>
+                        <label class="address">Адрес*</label>
                         <div class="radio">
                             <input class="custom-radio" type="radio" id="komsomolskaya" name="adress"
                                 value="komsomolskaya" checked>
@@ -269,7 +269,7 @@
                                     <form action="#" method="get" class="wintel">
                                         <div class="input-group">
                                             <label for="phone">Телефон*</label>
-                                            <input type="tel" name="phone" id="phone" value="+375" required />
+                                            <input type="tel" name="phone" value="+375" required />
                                         </div>
                                         <div>
                                             <button class="button color" type="submit">Заказать звонок</button>
